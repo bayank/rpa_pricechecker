@@ -1,0 +1,9 @@
+{
+    "close_popup": {
+        "screenshot": ".images/dividjoinemailcampaigndivdivdialogsectiondivdiv5a-screenshot.png",
+        "source": "https://www.potterybarn.com/products/markle-antiqued-panel-mirror/",
+        "strategy": "xpath",
+        "type": "browser",
+        "value": "//div[@id='join-email-campaign']/div/div/dialog/section/div/div[5]/a"
+    }
+}
