@@ -8,7 +8,7 @@ Library    RPA.Robocorp.Vault
 
 *** Variables ***
 ${browser}      firefox
-${ENV}    LOCAL    # LOCAL or CLOUD
+${ENV}    CLOUD    # LOCAL or CLOUD
 
 
 *** Test Cases ***
