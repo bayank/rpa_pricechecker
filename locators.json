@@ -5,5 +5,10 @@
         "strategy": "xpath",
         "type": "browser",
         "value": "//div[@id='join-email-campaign']/div/div/dialog/section/div/div[5]/a"
+    },
+    "select_size": {
+        "strategy": "xpath",
+        "type": "browser",
+        "value": "//span[normalize-space()='30.5\" x 30.5\"']"
     }
 }

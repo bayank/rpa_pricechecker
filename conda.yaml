@@ -9,8 +9,11 @@ dependencies:
   - python=3.10.12                # https://pyreadiness.org/3.10
   - pip=23.2.1                    # https://pip.pypa.io/en/stable/news
   - robocorp-truststore=0.8.0     # https://pypi.org/project/robocorp-truststore/
-  - firefox=119
-  - geckodriver=0.33.0
+  - firefox=130
+  - geckodriver=0.35.0
+  - robocorp==2.1.0
+
   - pip:
-    - rpaframework==27.7.0        # https://rpaframework.org/releasenotes.html
-    - robotframework-seleniumlibrary==6.2.0
+    - rpaframework==28.6.3        # https://rpaframework.org/releasenotes.html
+    - robotframework-seleniumlibrary==6.6.1
+    - robocorp-browser==2.3.3
