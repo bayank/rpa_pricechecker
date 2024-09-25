@@ -5,7 +5,7 @@ from robocorp import vault, log, browser
 import time
 
 
-browser = "firefox"
+BROWSER = "firefox"
 ENV = "CLOUD" # LOCAL or CLOUD
 CHANGED = False
 RESULTS = []
@@ -14,15 +14,15 @@ window = Selenium()
 
 @task
 def CheckPriceMirror():
-    global CHANGED, RESULTS, ENV, browser
+    global CHANGED, RESULTS, ENV, BROWSER
     item = "Mirror"
     url = "https://www.potterybarn.com/products/markle-antiqued-panel-mirror/"
     base_price = 399
 
     if ENV == "LOCAL":
-        window.open_browser(url=url, browser=browser)
+        window.open_browser(url=url, browser=BROWSER)
     elif ENV == "CLOUD":
-        window.open_available_browser(url=url, browser_selection=browser, headless=True)
+        window.open_available_browser(url=url, browser_selection=BROWSER, headless=True)
 
     # Close popup
     window.wait_until_element_is_visible(locator="alias:close_popup", timeout=1)
@@ -50,15 +50,15 @@ def CheckPriceMirror():
 
 @task
 def CheckPriceMonitor():
-    global CHANGED, RESULTS, ENV, browser
+    global CHANGED, RESULTS, ENV, BROWSER
     item = "Dell U4025QW Monitor"
     url = "https://www.dell.com/en-us/shop/dell-ultrasharp-40-curved-thunderbolt-hub-monitor-u4025qw/apd/210-bmdp/monitors-monitor-accessories"
     base_price = 1919.99
 
     if ENV == "LOCAL":
-        window.open_browser(url=url, browser=browser)
+        window.open_browser(url=url, browser=BROWSER)
     elif ENV == "CLOUD":
-        window.open_available_browser(url=url, browser_selection=browser, headless=True)
+        window.open_available_browser(url=url, browser_selection=BROWSER, headless=True)
 
     current_price:str = window.get_text(locator="//div[@data-testid='sharedPSPDellPrice']")
     current_price = float(current_price.replace("$", "").replace(",", ""))
